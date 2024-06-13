@@ -1,0 +1,138 @@
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #f4f4f4;
+    --accent-color: #ff6f61;
+    --font-color: white;
+    --font-family: Arial, sans-serif;
+    --border-radius: 5px;
+    --padding: 10px;
+    --transition: 0.3s ease;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height:100% ;
+}
+
+body {
+
+    background-image: url(src/bikebike.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: var(--font-family);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+header {
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    padding: var(--padding) 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 1em;
+    transition: color var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    text-align: center;
+    padding: var(--padding);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.product {
+    background: var(--secondary-color);
+    padding: var(--padding);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform var(--transition);
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em;
+    color: var(--primary-color);
+}
+
+
+@media (min-width: 600px) {
+    .product {
+        flex: 0 0 48%;
+    }
+}
+
+@media (min-width: 900px) {
+    .product {
+        flex: 0 0 30%;
+    }
+}
